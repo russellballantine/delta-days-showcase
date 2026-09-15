@@ -1,0 +1,12 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+*.translation
+*.import
+.mono/
+data_*/
+Showcase_Web_Build/
+*.zip
+assets/
+*.bin
+

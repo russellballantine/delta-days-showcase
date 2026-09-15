@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://yu46pyljl1cq"]
+
+[ext_resource type="Material" uid="uid://lbgdehjwawo3" path="res://mat_trim.tres" id="1_xvr3n"]
+[ext_resource type="Material" uid="uid://du4jtsgettv1d" path="res://mat_wall.tres" id="2_5kgf5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ghgj"]
+material = ExtResource("1_xvr3n")
+size = Vector3(0.15, 4, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ah6bk"]
+material = ExtResource("2_5kgf5")
+size = Vector3(2, 4, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_342bu"]
+material = ExtResource("1_xvr3n")
+size = Vector3(2, 0.25, 1.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_847hx"]
+material = ExtResource("2_5kgf5")
+size = Vector3(2, 4, 0.25)
+
+[node name="Facade_Template" type="Node3D" unique_id=1647871727]
+
+[node name="Support_Column_Left" type="MeshInstance3D" parent="." unique_id=1570151871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.925, 2, -1.425)
+mesh = SubResource("BoxMesh_7ghgj")
+
+[node name="Support_Column_Right" type="MeshInstance3D" parent="." unique_id=697958232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.925, 2, -1.425)
+mesh = SubResource("BoxMesh_7ghgj")
+
+[node name="Ground_Wall" type="MeshInstance3D" parent="." unique_id=883553397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.125)
+mesh = SubResource("BoxMesh_ah6bk")
+
+[node name="Balcony_Slab" type="MeshInstance3D" parent="." unique_id=898826996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -0.75)
+mesh = SubResource("BoxMesh_342bu")
+
+[node name="Upper_Wall" type="MeshInstance3D" parent="." unique_id=1782700698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0.125)
+mesh = SubResource("BoxMesh_847hx")

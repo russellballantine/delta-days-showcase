@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://qgig4opkgnfo"]
+
+[ext_resource type="Script" uid="uid://ddia82g3j2n3y" path="res://base_filler.gd" id="1_l1hmi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ghgj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ah6bk"]
+
+[node name="BaseFiller" type="StaticBody3D" unique_id=1562664811]
+script = ExtResource("1_l1hmi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1395441683]
+mesh = SubResource("BoxMesh_7ghgj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1992419844]
+shape = SubResource("BoxShape3D_ah6bk")
